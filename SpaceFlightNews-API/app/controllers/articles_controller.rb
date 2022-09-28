@@ -12,8 +12,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
-
+    @article =
+      Residents::CreatorService.call(article_params: article_params)
     if @article.save
       render json: @article, status: :created, location: @article
     else
