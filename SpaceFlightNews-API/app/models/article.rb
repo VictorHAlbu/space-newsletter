@@ -9,6 +9,4 @@ class Article < ApplicationRecord
   validates :newsSite, presence: true
   validates :summary, presence: true
 
-  max_paginates_per 5
-
 end

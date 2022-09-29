@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article =
-      Residents::CreatorService.call(article_params: article_params)
+     Articles::CreatorService.call(article_params: article_params)
     if @article.save
       render json: @article, status: :created, location: @article
     else
@@ -40,11 +40,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      launches_attributes = %i[id provider]
-      events_attributes = %i[id provider]
-
-      params.require(:article)
-      .permit(:featured, :title, :url, :imageUrl, :newsSite, :summary, 
-        :publishedAt, launches_attributes: launches_attributes, events_attributes: events_attributes )
+      params.require(:article).permit(:featured, :title, :url, :imageUrl, :newsSite, :summary)
     end
 end
