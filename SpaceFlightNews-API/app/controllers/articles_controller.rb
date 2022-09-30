@@ -3,6 +3,9 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+                .limit(10)
+                .includes(:launches)
+                .includes(:events)
   end
 
   def show
