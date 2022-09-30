@@ -269,7 +269,7 @@ DEPENDENCIES
   database_cleaner (~> 2.0, >= 2.0.1)
   factory_bot_rails (~> 6.2)
   faker (~> 2.21)
-  jbuilder (~> 2.7)
+  jbuilder
   kaminari (~> 1.2, >= 1.2.2)
   listen (~> 3.3)
   pg (~> 1.1)
