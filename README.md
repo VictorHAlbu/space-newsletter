@@ -41,13 +41,15 @@ bundle install
 ```
 
 Obs:  
- 
-
 Em seguida crie sua base de dados com comandos:
 
 ```
 rails db:create
 rails db:migrate
+```
+## Agendar carregamento diário do banco
+```bash
+$ bundle exec whenever --update-crontab --set environment='development'
 ```
 ### Teste de Api com Curl
 Rode os comandos para criar Articles, Launches e Events : 
