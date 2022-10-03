@@ -34,6 +34,7 @@ npm start
 ```
 
 
+
 Na sua máquina acesse a pasta da Api execute os comandos:
 ```
 bundle install
@@ -48,6 +49,19 @@ Em seguida crie sua base de dados com comandos:
 rails db:create
 rails db:migrate
 ```
+### Teste de Api com Curl
+Rode os comandos para criar Articles, Launches e Events : 
+
+```
+curl -XPOST -H "Content-Type: application/json" -d '{ "article": { "featured": true, "title": "Lorem ipsum author", "url": "Lore genre", "imageUrl": "Lore genreasdasd", "newsSite": "Lore", "summary": "Lore" } }' http://localhost:3000/articles
+
+
+curl -XPOST -H "Content-Type: application/json" -d '{ "launch": { "provider": "test"} }'  http://localhost:3000/articles/1/launches
+
+curl -XPOST -H "Content-Type: application/json" -d '{ "event": { "provider": "test"} }'  http://localhost:3000/articles/1/events
+
+```
+
 Test:<br>
 para rodar os testes de acordo com model desejádo rode o comando<br>
 ex:
