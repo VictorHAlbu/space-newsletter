@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :events
     end
     get '', to: 'home#index'
+    
   end
 
 end
