@@ -10,7 +10,7 @@ Foi criado um CRON para ser executado diariamente às 9h e armazenar em seu os n
 Para desenvolver o projeto foi usado as tecnologias: Ruby on Rails, React e Postgresql 
 
 ### Pré-requisitos Back-end
-
+Acessar Repositório SpaceFlightNews-API
 Para rodar o projeto na sua máquina, deve ter instalado o ruby, rails e Postgres
 
 ```
@@ -20,6 +20,7 @@ Postgresql
 ```
 
 ### Pré-requisitos Front-end
+Acessar space-flinght-front
 React<br>
 Axios<br>
 Caso não tenha o react na sua máquina rode:
